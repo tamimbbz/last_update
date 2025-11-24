@@ -82,8 +82,8 @@ module.exports.run = async function ({ api, event, args }) {
     }
 
     msg += `⭔ Type ${global.config.PREFIX || "!"}help [command] to see details\n`;
-    msg += `╭─[⋆˚🦋𝐌𝐚𝐫𝐢𝐚 × 𝐫𝐗🎀⋆˚]\n`;
-    msg += `╰‣ 𝐀𝐝𝐦𝐢𝐧 : 𝐫𝐗 𝐀𝐛𝐝𝐮𝐥𝐥𝐚𝐡\n`;
+    msg += `╭─[⋆˚🦋Ｓａｙｍａ🇧​​🇧​​🇿​🎀⋆˚]\n`;
+    msg += `╰‣ 𝐀𝐝𝐦𝐢𝐧 : 🆃🅰🅼🅸🅼​🇧​​🇧​​🇿​\n`;
 
     api.sendMessage(msg, event.threadID, (err, info) => {
       if (!err) {
