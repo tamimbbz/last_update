@@ -17,20 +17,16 @@ const BOT_DESC = pkg.description || "𝐘𝐓 : 𝐆𝐫𝐨𝐰 𝐰𝐢𝐭�
 
 // ==================== Express Server ====================
 const app = express();
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/index.html"));
 });
 
-app.listen(port, () => {
-    logger(`Server is running on port ${port}...`, "[ Starting ]");
+app.listen(PORT, () => {
+    logger(`Server is running on port ${PORT}...`, "[ Starting ]");
 }).on("error", (err) => {
-    if (err.code === "EACCES") {
-        logger(`Permission denied. Cannot bind to port ${port}.`, "[ Error ]");
-    } else {
-        logger(`Server error: ${err.message}`, "[ Error ]");
-    }
+    logger(`Server error: ${err.message}`, "[ Error ]");
 });
 
 // ==================== Start Bot ====================
@@ -39,7 +35,8 @@ global.countRestart = global.countRestart || 0;
 function startBot(message) {
     if (message) logger(message, "[ Starting ]");
 
-    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "Abdullah.js"], {
+    // FIXED: Bot file name corrected
+    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "Rxabdullah.js"], {
         cwd: __dirname,
         stdio: "inherit",
         shell: true
@@ -56,7 +53,7 @@ function startBot(message) {
     });
 
     child.on("error", (error) => {
-        logger(`An error occurred: ${JSON.stringify(error)}`, "[ Error ]");
+        logger(`An error occurred: ${error.message}`, "[ Error ]");
     });
 }
 
