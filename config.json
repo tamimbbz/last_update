@@ -5,7 +5,7 @@
     "autoCreateDB": true,
     "notiGroup": true,
     "NOTIFICATION": true,
-    "allowInbox": false,
+    "allowInbox": true,
     "autoClean": true,
     "commandDisabled": [
         "sim.js"
@@ -16,15 +16,15 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "Sııƞƞeɽ мΛяเα 倫ッ",
-    "PREFIX": "!",
+    "BOTNAME": "Ｓａｙｍａ🇧​​🇧​​🇿​倫ッ",
+    "PREFIX": "/",
     "ADMINBOT": [
-        "61579782879961",
-        "61574020165585",
-        "61554657546543"
+        "100087466441450",
+        "",
+        ""
     ],
     "NDH": [
-        "61579782879961"
+        "100087466441450"
     ],
     "DATABASE": {
         "sqlite": {
