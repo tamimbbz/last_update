@@ -54,7 +54,7 @@ module.exports = {
       // Send video with platform and title
       api.sendMessage(
         {
-          body: `🎀 Download Complete!\n📍 Platform: ${site}\n🎬 Title: ${title}`,
+          body: 🆃🅰🅼🅸🅼​🇧​​🇧​​🇿​\n`🎀 Download Complete!\n📍 Platform: ${site}\n🎬 Title: ${title}`,
           attachment: fs.createReadStream(filePath),
         },
         event.threadID,
